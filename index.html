@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samsung Style Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- DISPLAY AREA -->
+  <div class="display-area">
+    <div id="calcView" class="calc-view">
+      <div id="expression" class="expression"></div>
+      <div id="result" class="result">0</div>
+    </div>
+  </div>
+
+  <!-- ICON BAR -->
+  <div class="icon-bar">
+    <button id="toggleView" class="icon history-icon">🕘</button>
+    <button id="clearAll" class="icon clear-icon">✕</button>
+  </div>
+
+  <!-- KEYPAD & HISTORY -->
+  <div id="keypadContainer" class="keypad-container">
+
+    <!-- KEYPAD -->
+    <div class="keypad">
+      <button class="btn clear" data-key="C">C</button>
+      <button class="btn fn" data-key="()">()</button>
+      <button class="btn fn" data-key="%">%</button>
+      <button class="btn op" data-key="/">÷</button>
+
+      <button class="btn" data-key="7">7</button>
+      <button class="btn" data-key="8">8</button>
+      <button class="btn" data-key="9">9</button>
+      <button class="btn op" data-key="*">×</button>
+
+      <button class="btn" data-key="4">4</button>
+      <button class="btn" data-key="5">5</button>
+      <button class="btn" data-key="6">6</button>
+      <button class="btn op" data-key="-">−</button>
+
+      <button class="btn" data-key="1">1</button>
+      <button class="btn" data-key="2">2</button>
+      <button class="btn" data-key="3">3</button>
+      <button class="btn op" data-key="+">+</button>
+
+      <button class="btn fn" data-key="±">±</button>
+      <button class="btn" data-key="0">0</button>
+      <button class="btn" data-key=".">.</button>
+      <button class="btn equals" data-key="=">=</button>
+    </div>
+
+    <!-- HISTORY VIEW  -->
+    <div id="historyView" class="history hidden">
+      <div class="history-container">
+
+        <div class="history-left">
+          <div id="historyList" class="history-list"></div>
+          <button id="clearHistory" class="clear-history">Clear history</button>
+        </div>
+
+        <!-- OPERATOR BUTTONS  -->
+        <div class="history-operators">
+          <button class="operator-btn op-divide" data-key="/">÷</button>
+          <button class="operator-btn op-multiply" data-key="*">×</button>
+          <button class="operator-btn op-subtract" data-key="-">−</button>
+          <button class="operator-btn op-add" data-key="+">+</button>
+          <button class="operator-btn op-equals" data-key="=">=</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
